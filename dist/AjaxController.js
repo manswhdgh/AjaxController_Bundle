@@ -12,7 +12,7 @@ return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 483:
+/***/ 664:
 /***/ (function(__unused_webpack_module, exports) {
 
 
@@ -53,16 +53,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.AjaxClientV2 = void 0;
-var AjaxClientV2 = /** @class */ (function () {
-    function AjaxClientV2() {
+exports.AjaxController = void 0;
+var AjaxController = /** @class */ (function () {
+    function AjaxController() {
     }
-    AjaxClientV2.sendGet = function (url, callback, errorCallback) {
-        var xhttp = AjaxClientV2.initialize(callback, errorCallback);
+    AjaxController.sendGet = function (url, callback, errorCallback) {
+        var xhttp = AjaxController.initialize(callback, errorCallback);
         xhttp.open("GET", url);
         xhttp.send();
     };
-    AjaxClientV2.sendGetAsync = function (url) {
+    AjaxController.sendGetAsync = function (url) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -75,36 +75,36 @@ var AjaxClientV2 = /** @class */ (function () {
         });
     };
     // sendPost(url, query, callback, errorCallback)
-    AjaxClientV2.sendPost = function (url, query, callback, errorCallback) {
-        var xhttp = AjaxClientV2.initialize(callback, errorCallback);
+    AjaxController.sendPost = function (url, query, callback, errorCallback) {
+        var xhttp = AjaxController.initialize(callback, errorCallback);
         xhttp.open("POST", url);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
         xhttp.send(query);
     };
-    AjaxClientV2.sendPostFormData = function (url, query, callback, errorCallback) {
-        var xhttp = AjaxClientV2.initialize(callback, errorCallback);
+    AjaxController.sendPostFormData = function (url, query, callback, errorCallback) {
+        var xhttp = AjaxController.initialize(callback, errorCallback);
         xhttp.open("POST", url, true);
         xhttp.send(query);
     };
-    AjaxClientV2.sendPostFormDataAsync = function (url, query) {
+    AjaxController.sendPostFormDataAsync = function (url, query) {
         return new Promise(function (resolve, reject) {
-            AjaxClientV2.sendPostFormData(url, query, resolve, reject);
+            AjaxController.sendPostFormData(url, query, resolve, reject);
         });
     };
-    AjaxClientV2.sendPostAsync = function (url, query) {
+    AjaxController.sendPostAsync = function (url, query) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, new Promise(function (resolve, reject) {
-                        AjaxClientV2.sendPost(url, query, resolve, reject);
+                        AjaxController.sendPost(url, query, resolve, reject);
                     })];
             });
         });
     };
-    AjaxClientV2.sendJsonAsync = function (url, json) {
+    AjaxController.sendJsonAsync = function (url, json) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, new Promise(function (resolve, reject) {
-                        var xhttp = AjaxClientV2.initialize(resolve, reject);
+                        var xhttp = AjaxController.initialize(resolve, reject);
                         xhttp.open("POST", url, true);
                         xhttp.setRequestHeader("Content-Type", "application/json");
                         xhttp.send(json);
@@ -112,17 +112,17 @@ var AjaxClientV2 = /** @class */ (function () {
             });
         });
     };
-    AjaxClientV2.sendObjectAsync = function (url, obj) {
+    AjaxController.sendObjectAsync = function (url, obj) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, AjaxClientV2.sendJsonAsync(url, JSON.stringify(obj))];
+                    case 0: return [4 /*yield*/, AjaxController.sendJsonAsync(url, JSON.stringify(obj))];
                     case 1: return [2 /*return*/, _a.sent()];
                 }
             });
         });
     };
-    AjaxClientV2.sendFetchAsync = function (url) {
+    AjaxController.sendFetchAsync = function (url) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -136,7 +136,7 @@ var AjaxClientV2 = /** @class */ (function () {
             });
         });
     };
-    AjaxClientV2.initialize = function (callback, errorCallback) {
+    AjaxController.initialize = function (callback, errorCallback) {
         var xhttp = new XMLHttpRequest();
         xhttp.withCredentials = true;
         xhttp.onreadystatechange = function () {
@@ -151,9 +151,9 @@ var AjaxClientV2 = /** @class */ (function () {
         };
         return xhttp;
     };
-    return AjaxClientV2;
+    return AjaxController;
 }());
-exports.AjaxClientV2 = AjaxClientV2;
+exports.AjaxController = AjaxController;
 
 
 /***/ })
@@ -165,7 +165,7 @@ exports.AjaxClientV2 = AjaxClientV2;
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__[483](0, __webpack_exports__);
+/******/ 	__webpack_modules__[664](0, __webpack_exports__);
 /******/ 	
 /******/ 	return __webpack_exports__;
 /******/ })()
